@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  --school-color: rgb(237 46 69);
+}
+
+.App {
+  font-family: "aktiv-grotesk", sans-serif;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  font-size: calc(1.5vmin);
+  color: var(--school-color);
+  border-bottom: 3px solid var(--school-color);
+}
+
+.App-body {
+  margin: 60px 35px;
+  height: 60vh;
+}
+
+.App-footer {
+  text-align: center;
+  border-top: 3px solid var(--school-color);
+  font-style: italic;
+}
