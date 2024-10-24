@@ -1,20 +1,21 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+$('body').append("<p>Holberton Dashboard</p>");
+$('body').append("<p>Dashboard data for the students</p>");
+$('body').append("<button>Click here to get started</button");
+$('body').append("<p id='count'></p>");
+$('body').append("<p>Copyright - Holberton School</p>");
+
 let count = 0;
-
+let infoClick = "";
+let display = document.getElementById('count');
 function updateCounter() {
-	count++;
-	$('#count').text(`${count} clicks on the button`);
-}
+    count++;
+    infoClick = `${count} clicks on the button`;
+    display.innerHTML = infoClick;
+};
 
-const debouncedUpdateCounter = _.debounce(updateCounter, 300);
-
-$('body')
-	.append('<p>Holberton Dashboard</p>')
-	.append('<p>Dashboard data for the students</p>')
-	.append('<button>Click here to get started</button>')
-	.append("<p id='count'></p>")
-	.append('<p>Copyright - Holberton School</p>');
-
-$('button').on('click', debouncedUpdateCounter);
+$('button').on('click', _.debounce(function()  {
+    updateCounter();
+}, 300));

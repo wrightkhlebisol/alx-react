@@ -1,23 +1,22 @@
-import Logo from './Logo.jpg';
+import logo from './logo.jpg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={Logo} className="App-logo" alt="logo" />
-        <h1>School dashboard</h1>
-      </header>
-
-      <body class="App-body">
-        <p>Login to access the full dashboard</p>
-      </body>
-
-      <footer class="App-footer">
-        <p>Copyright 2020 - holberton School</p>
-      </footer>
-    </div>
-  );
+export default function App() {
+    return (
+        <div>
+            <header className="App-header">
+                <img src={logo} alt="logo"></img>
+                <h1>School dashboard</h1>
+            </header>
+            <div className="linea"></div>
+            <div className="App-body">
+                <p>Login to access the full dashboard</p>
+            </div>
+            <div className="linea"></div>
+            <footer className="App-footer">
+                <p>Copyright 2020 - holberton School</p>
+            </footer>
+        </div>
+    );
 }
-
-export default App;
+  
